@@ -32,3 +32,14 @@ print(dog.bark())     # Виведе: Собака голосно гавкає
 
 breed_dog = BreedDog("Собака", "Дог")
 print(breed_dog.speak())  # Виведе: Собака щось каже і Собака є Дог
+
+
+class MyClass:
+    def __init__(self, value):
+        self.__my_private_method(value)
+
+    def __my_private_method(self, value):
+        print(f"Private method called with value: {value}")
+
+# Спроба викликати __my_private_method поза класом призведе до помилки
+obj = MyClass(42)
