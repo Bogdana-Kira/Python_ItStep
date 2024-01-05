@@ -1,2 +1,7 @@
-if 2+2 == 4:
-    print("In fact, 2 + 2 equals 4")
+def adder(*args, **kwargs):
+    result = 0
+    for _ in args:
+        result += _
+    for _ in kwargs.values():
+        result += _
+    return result
